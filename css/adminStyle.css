@@ -1,0 +1,288 @@
+body {
+  background-color: #f9eadc;
+}
+
+.adminHeader {
+  /* margin: 3px 3px 0; */
+  width: 100%;
+  height: 10vh;
+  background: #bd2020;
+  /* box-shadow: 0 0 10px #12010d; */
+  border-radius: 5px;
+}
+
+.adminHeader img {
+  width: 40px;
+  height: 40px;
+  margin: 2px 10px;
+  background-size: 2% 2%;
+  background-position: center;
+  text-align: center;
+  border-radius: 50%;
+}
+
+.adminHeader .headLeft {
+  float: left;
+  display: flex;
+  width: 40%;
+  align-items: center;
+  margin-top: 0.1rem;
+}
+
+.adminHeader .headRight {
+  float: right;
+  display: inline;
+  width: 55%;
+}
+
+.adminHeader .headLeft .title {
+  margin-top: 1px;
+  margin-left: 5px;
+  font-size: 20pt;
+  font-weight: bold;
+  color: white;
+}
+
+.adminHeader .headLeft p {
+  font-size: 12pt;
+  font-weight: bold;
+}
+.adminHeader .headRight p {
+  margin: 3px;
+  font-size: 10pt;
+  color: #f7e5ce;
+  text-align: right;
+  padding-top: 5px;
+  margin-right: 10px;
+}
+
+.adminHeader ul.menubar {
+  margin: 6px;
+  font-size: 12pt;
+  list-style: none;
+  float: right;
+}
+
+.adminHeader ul.menubar li {
+  float: left;
+  margin-right: 10px;
+  color: white;
+}
+
+.adminHeader ul.menubar li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bolder;
+  /* border-bottom: 2px solid transparent; */
+  padding-bottom: 10px;
+  transition: all 0.3s ease;
+}
+
+.adminHeader ul.menubar li a:hover {
+  color: black;
+  font-weight: bolder;
+  border-bottom: 2px solid #f4f3f5;
+  padding-bottom: 0px;
+}
+
+.main {
+  width: 70%;
+  height: 85vh;
+  background-color: white;
+  margin: 10px auto;
+  border-radius: 10px;
+}
+
+.topic {
+  display: inline;
+  text-align: center;
+}
+
+.topic img {
+  width: 10vw;
+  height: 10vh;
+}
+
+.topic h3 {
+  float: left;
+  margin: 20px;
+  font-weight: bold;
+}
+
+.topic button {
+  float: right;
+  background-color: rgb(60, 121, 10);
+  border: 1px solid white;
+  color: white;
+  font-size: 11pt;
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 10px;
+  width: 200px;
+  margin: 13px;
+}
+
+.work {
+  width: 100%;
+  height: 75vh;
+  overflow: auto;
+}
+
+.work .memberTable {
+  margin: 5px 5px;
+  display: inline-table;
+  width: 98%;
+  overflow: auto;
+  text-align: center;
+  border-radius: 10px;
+  font-size: 12pt;
+}
+
+.work .memberTable th,
+td {
+  border: 2px solid #f4f3f5;
+  border-radius: 5px;
+}
+
+.work .memberTable th {
+  background-color: #d47239;
+  color: white;
+  border-bottom: 1px solid #afaeae;
+  padding: 5px;
+}
+
+.work .memberTable td {
+  padding: 5px;
+  background-color: #f4e0e0;
+}
+
+.work .memberTable button {
+  width: 80px;
+  padding: 5px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.work .memberTable .b1 {
+  background-color: #7171f0;
+}
+
+.work .memberTable .b2 {
+  background-color: #f6bc3d;
+}
+
+.work .memberTable .b2 a:hover {
+  text-decoration: none;
+}
+
+.info_member {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  display: none;
+  backdrop-filter: blur(1px);
+}
+
+.info_detail {
+  /* width: 60%;
+  height: 75vh; */
+  background-color: red;
+  margin: 10px auto;
+  padding: 20px;
+  color: white;
+  border-radius: 10px;
+}
+
+.member {
+  width: 60%;
+  height: 75vh;
+  background-color: red;
+}
+
+.employee {
+  width: 60%;
+  height: 65vh;
+  background-color: #f0691e;
+}
+
+.product {
+  width: 60%;
+  height: 70vh;
+  background-color: #620e30;
+}
+
+.info_detail .infoLeft {
+  float: left;
+  width: 55%;
+  margin: 15px;
+  /* border: 2px solid black; */
+  text-align: right;
+}
+
+.info_detail h4 {
+  font-weight: bolder;
+}
+
+.info_detail .infoLeft label {
+  font-size: 12pt;
+  font-weight: bold;
+  color: white;
+  width: 100px;
+}
+
+.info_detail .infoLeft input,
+textarea {
+  color: black;
+  border-radius: 5px;
+  border: none;
+  width: 100%;
+  padding: 0px 5px;
+}
+
+.info_detail .infoRight {
+  float: right;
+  width: 40%;
+  text-align: center;
+}
+
+.info_detail .infoRight p {
+  font-size: 11pt;
+}
+
+.info_detail .infoRight img {
+  width: 17vw;
+  height: 35vh;
+  border-radius: 50%;
+}
+
+.info_detail .infoRight .btImg {
+  width: 16vw;
+  background-color: black;
+  border-radius: 12px;
+  color: white;
+}
+
+.info_detail .infoRight .btCancel {
+  width: 8vw;
+  /* margin-top: 5vh; */
+  padding: 3px;
+  background-color: #f8f405;
+  border-radius: 5px;
+  color: black;
+  bottom: 0;
+}
+
+.info_detail .infoRight .btInsert {
+  width: 8vw;
+  /* margin-top: 5vh; */
+  padding: 3px;
+  background-color: #4921fa;
+  border-radius: 5px;
+  color: white;
+}
