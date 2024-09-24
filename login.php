@@ -17,15 +17,15 @@
             <form action="loginProcess.php" method="post" enctype="multipart/form-data">
                 <p class="htxt">ยินดีต้อนรับ</p>
                 <p class="txt1">ชื่อเข้าใช้ระบบ/e-mail</p>
-                <input type="text" class="itxt" name="Uname" value="E0001">
+                <input type="text" class="itxt" name="Uname" value="C0001">
                 <p class="txt1">รหัสผ่าน</p>
-                <input type="password" class="itxt" name="Passwd" value="qwerty">
+                <input type="password" class="itxt" name="Passwd" value="1234">
                 <p class=" ichk"><input type="checkbox" name="" id=""> ลืมรหัสผ่าน ?</p>
                 <button type="submit">Login</button>
                 <p class="txt2">ต้องการสมัครสมาชิกใหม่, คลิก!</p>
             </form>
         </div>
-        <div class="sright" ><img src="img/post2.jpg" alt="" onclick="window.location='index.php';"></div>
+        <div class="sright"><img src="img/post2.jpg" alt="" onclick="window.location='index.php';"></div>
     </div>
 </body>
 

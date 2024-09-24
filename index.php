@@ -140,7 +140,7 @@ if (isset($_GET['search'])) {
                             <p><b>Type : </b><?php echo $data[$key]['New_type']; ?> </b></p>
                             <p><b>Name : </b><?php echo $data[$key]['New_name']; ?>....</b></p>
                             <p><b>Price : </b><?php echo number_format($data[$key]['Product_price'], 2); ?></p>
-                            <button onclick="alert('ฉันเลือกซื้อสินค้ารายการนี้....');">เลือกซื้อ</button>
+                            <button onclick="alert('ฉันเลือกซื้อสินค้ารายการนี้....');window.location='cart.php?pid=<?php echo $data[$key]['Product_id']; ?>';">เลือกซื้อ</button>
                         </div>
                     </div>
                 <?php }

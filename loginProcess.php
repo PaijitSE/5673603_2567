@@ -28,14 +28,14 @@ if (empty($data)) {
         $_SESSION["flag"]   = '1';            //สิทธิ์สมาชิก
         echo "<script type='text/javascript'>";
         // echo "alert('สวัสดีคุณลูกค้า ชื่อ".$name."');";
-        echo "window.location = 'index.php';";
+        echo "window.location = 'profile.php';";
         echo "</script>";
     } else {
         if ($pos == 'P00') {
             $_SESSION["flag"]   = '3';            //สิทธิ์ผู้บริหาร
             echo "<script type='text/javascript'>";
             // echo "alert('สวัสดีคุณผู้บริหาร ชื่อ".$name."');";
-            echo "window.location = 'index.php';";
+            echo "window.location = 'saleReport.php';";
             echo "</script>";
         } else {
             $_SESSION["flag"]   = '2';            //สิทธิ์เจ้าหน้าที่

@@ -24,7 +24,7 @@ $date = '';
 $tsearch = '';
 if (isset($_GET['date']) && $_GET['date'] != '') {
     $date = $_GET['date'];
-    $tsearch = "WHERE (Inv_date LIKE '%$date')";
+    $tsearch = "WHERE (Order_date LIKE '%$date')";
 }
 ?>
 <html lang="en">
@@ -67,9 +67,9 @@ if (isset($_GET['date']) && $_GET['date'] != '') {
         <div class="reportHead">
             <div class="company">
                 <img src="img/logo.png"><label>บริษัท SE-Store จำกัด</label>
-                <p>รายงานการขายสินค้า <?php if ($date != '') {
-                                            echo ": ประจำเดือน " . $date;
-                                        } ?></p>
+                <p>รายงานการสั่งซื้อเข้าคลังสินค้า <?php if ($date != '') {
+                                                        echo ": ประจำเดือน " . $date;
+                                                    } ?></p>
             </div>
         </div>
 
@@ -77,27 +77,23 @@ if (isset($_GET['date']) && $_GET['date'] != '') {
             <table class="saleTable">
                 <thead>
                     <tr>
-                        <th>เลขที่ใบเสร็จ</th>
-                        <th>วันที่ใบเสร็จ</th>
-                        <th>ชื่อสมาชิก</th>
+                        <th>เลขที่ใบส่งของ</th>
+                        <th>วันที่ใบส่งของ</th>
+                        <th>ชื่อผู้ค้า</th>
                         <th>จำนวนซื้อ</th>
                         <th>รวมเงิน</th>
-                        <th>ส่วนลด</th>
-                        <th>ภาษี</th>
                         <th>รวมสุทธิ</th>
                     </tr>
                 </thead>
                 <?php
                 $total = 0;
                 $flag = 0;
-                $data = $db_handle->Textquery("SELECT * FROM INVOICE " . $tsearch . " ORDER BY RIGHT(Inv_date,4) DESC, SUBSTR(Inv_date,4,2) DESC, LEFT(Inv_date,2) DESC");
+                $data = $db_handle->Textquery("SELECT * FROM ORDERS " . $tsearch . " ORDER BY RIGHT(Order_date,4) DESC, SUBSTR(Order_date,4,2) DESC, LEFT(Order_date,2) DESC");
                 if (!empty($data)) {
                     foreach ($data as $key => $value) { ?>
                         <tr>
-                            <td><button onclick="invPrint(this);"><?php echo $data[$key]['Inv_no']; ?></button></td>
-                            <td><?php echo $data[$key]['Inv_date']; ?></td>
-                            <td>x</td>
-                            <td>x</td>
+                            <td><button onclick="invPrint(this);"><?php echo $data[$key]['Order_no']; ?></button></td>
+                            <td><?php echo $data[$key]['Order_date']; ?></td>
                             <td>x</td>
                             <td>x</td>
                             <td>x</td>
@@ -115,7 +111,7 @@ if (isset($_GET['date']) && $_GET['date'] != '') {
             if ($flag == 1) { ?>
 
                 <div class="notFound">
-                    <p>ไม่พบข้อมูลรายการขายสินค้าในวันดังกล่าว !</p>
+                    <p>ไม่พบข้อมูลรายการสั่งซื้อเข้าคลังสินค้าในวันดังกล่าว !</p>
                 </div>
             <?php } ?>
         </div>
@@ -133,13 +129,13 @@ if (isset($_GET['date']) && $_GET['date'] != '') {
     <script>
         function dateClick() {
             Tdate = document.getElementById('date').value;
-            window.location = 'saleReport.php?date=' + Tdate;
+            window.location = 'purchaseReport.php?date=' + Tdate;
         }
 
         function invPrint(e) {
-            var invNo = e.innerText;
-            alert('เตรียมพิมพ์ใบสั่งซื้อ/ใบเสร็จเลขที่ ' + invNo);
-            window.location = 'invoice.php?invid=' + invNo;
+            var Oid = e.innerText;
+            alert('เตรียมพิมพ์ใบส่งของเลขที่ ' + Oid);
+            // window.location = 'orders.php?Oid=' + Oid;
         }
     </script>
 </body>
