@@ -1,6 +1,9 @@
+.master {
+  background-color: #974313;
+}
+
 .reportHead {
-  display: grid;
-  grid-template-columns: 85% 15%;
+  display: flex;
 }
 
 .reportHead .company {
